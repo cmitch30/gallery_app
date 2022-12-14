@@ -1,11 +1,11 @@
 import React from "react";
-import {NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   <nav className="main-nav">
     <ul>
       <li>
-        <NavLink to="cat">Cats</NavLink>
+        <NavLink to="anime">Anime</NavLink>
       </li>
       <li>
         <NavLink to="dogs">Dogs</NavLink>
