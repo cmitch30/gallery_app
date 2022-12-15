@@ -4,6 +4,7 @@ import Photo from "./Photo";
 
 const PhotoContainer = (props) => {
   const results = props.data;
+  console.log(results)
   let photos;
   if (results.length) {
     photos = results.map((photo) => (
@@ -16,23 +17,12 @@ const PhotoContainer = (props) => {
   } else {
     photos = <NotFound />;
   }
-  return <ul>{photos}</ul>;
+  return (
+    <div className="photo-container">
+      <h2>Results for {props.query}</h2>
+      <ul>{photos}</ul>;
+    </div>
+  );
 };
-//   let photos = props.map((photo) => {
-//     return (
-//       <Photo
-//         img={photos.img_src}
-//         key={photos.id}
-//       />
-//     );
-//   });
-// return (
-//     <div className="photo-container">
-//     <h2>Results</h2>
-//     <ul>
-//         <Photo />
-//     </ul>
-//     </div>
-// )
 
 export default PhotoContainer;

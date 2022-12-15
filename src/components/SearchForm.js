@@ -10,7 +10,7 @@ const SearchForm = (props) => {
   };
 
   return (
-    <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
         type="search"
         ref={searchText}
