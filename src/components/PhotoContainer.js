@@ -4,13 +4,11 @@ import Photo from "./Photo";
 
 const PhotoContainer = (props) => {
   const results = props.data;
-  console.log(results)
   let photos;
   if (results.length) {
     photos = results.map((photo) => (
       <Photo
-        url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg
-`}
+        url={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
         key={photo.id}
       />
     ));
