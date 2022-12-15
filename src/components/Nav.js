@@ -8,7 +8,7 @@ const Nav = () => {
         <NavLink to="anime">Anime</NavLink>
       </li>
       <li>
-        <NavLink to="dogs">Dogs</NavLink>
+        <NavLink to="tokyo">Tokyo</NavLink>
       </li>
       <li>
         <NavLink to="computers">Computers</NavLink>

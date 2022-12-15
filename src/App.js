@@ -7,14 +7,14 @@ import apiKey from "./config";
 
 function App() {
   const [photos, setPhotos] = useState([]);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("bird");
 
   useEffect(() => {
     fetch(
-      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}tags=${query}&per_page=24&format=json&nojsoncallback=1`
+      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`
     )
-      .then((res) => res.json())
-      .then((data) => setPhotos(data))
+      .then((res) => (res.json()))
+      .then((data) => setPhotos(data.photos.photo))
       .catch((err) => console.log("Error fetching data:", err));
   }, [query]);
 
