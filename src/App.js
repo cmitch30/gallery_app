@@ -65,7 +65,7 @@ function App() {
         />
         <Route path="/thailand" element={<PhotoContainer data={thailand} />} />
         <Route
-          path="/:search"
+          path="/search/:query"
           element={<PhotoContainer data={photos} />}
         />
         <Route path="*" element={<NotFound />} />
